@@ -17,7 +17,8 @@ var checkIcon = document.querySelector('#check-icon');
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function () {
   document.querySelector('.copy-icon-box').addEventListener('click', function () {
     var inputValue = document.querySelector('#password-input').value;
-    if (inputValue.length > 0) {
+    if (inputValue.length > 0 && inputValue !== ':(') {
+      console.log(inputValue);
       navigator.clipboard.writeText(inputValue);
       copyIcon.style.display = 'none';
       checkIcon.style.display = 'block';
